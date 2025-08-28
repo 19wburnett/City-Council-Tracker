@@ -79,6 +79,9 @@ export default function HomePage() {
           <a href="/votes" className="btn-secondary">
             Browse Votes
           </a>
+          <a href="/demo" className="btn-primary bg-blue-600 hover:bg-blue-700">
+            View Demo
+          </a>
         </div>
       </section>
     </div>
