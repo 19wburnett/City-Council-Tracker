@@ -17,7 +17,7 @@ from supabase import create_client, Client
 from dotenv import load_dotenv
 
 # Load environment variables
-load_dotenv()
+load_dotenv('.env.local')
 
 # Configure logging
 logging.basicConfig(
@@ -29,7 +29,7 @@ logger = logging.getLogger(__name__)
 class BoulderCouncilScraper:
     def __init__(self):
         """Initialize the scraper with Supabase connection"""
-        self.supabase_url = os.getenv('SUPABASE_URL')
+        self.supabase_url = os.getenv('NEXT_PUBLIC_SUPABASE_URL')
         self.supabase_key = os.getenv('SUPABASE_SERVICE_ROLE_KEY')
         
         if not self.supabase_url or not self.supabase_key:
