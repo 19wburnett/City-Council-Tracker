@@ -27,7 +27,7 @@ export function MembersOverview() {
       try {
         const { data, error } = await supabase
           .from('council_members')
-          .select('*')
+          .select('id, name, title, seat, bio, photo_url, is_active')
           .eq('is_active', true)
           .order('name')
         
@@ -74,10 +74,23 @@ export function MembersOverview() {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {members.map((member) => (
-        <MemberCard key={member.id} member={member} />
-      ))}
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {members.slice(0, 6).map((member) => (
+          <MemberCard key={member.id} member={member} />
+        ))}
+      </div>
+      
+      {members.length > 6 && (
+        <div className="text-center">
+          <a 
+            href="/members" 
+            className="text-blue-600 hover:text-blue-700 font-medium"
+          >
+            View All {members.length} Council Members →
+          </a>
+        </div>
+      )}
     </div>
   )
 }

@@ -41,7 +41,7 @@ export function MembersList() {
         // First, get all active council members
         const { data: membersData, error: membersError } = await supabase
           .from('council_members')
-          .select('*')
+          .select('id, name, title, seat, bio, photo_url, is_active')
           .eq('is_active', true)
           .order('name')
 
@@ -54,7 +54,9 @@ export function MembersList() {
             const { data: votesData, error: votesError } = await supabase
               .from('votes')
               .select(`
+                id,
                 vote_value,
+                created_at,
                 agenda_items (
                   title,
                   category,
@@ -64,6 +66,7 @@ export function MembersList() {
                 )
               `)
               .eq('council_member_id', member.id)
+              .order('created_at', { ascending: false })
 
             if (votesError) {
               console.error(`Error fetching votes for ${member.name}:`, votesError)

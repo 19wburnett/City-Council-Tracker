@@ -75,11 +75,14 @@ export default function HomePage() {
           and make your voice heard.
         </p>
         <div className="space-x-4">
-          <a href="/meetings" className="btn-primary">
-            View Meetings
+          <a href="/members" className="btn-primary">
+            View Members
           </a>
           <a href="/votes" className="btn-secondary">
             Browse Votes
+          </a>
+          <a href="/meetings" className="btn-secondary">
+            View Meetings
           </a>
           <a href="/demo" className="btn-primary bg-blue-600 hover:bg-blue-700">
             View Demo

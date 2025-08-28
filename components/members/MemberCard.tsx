@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { User, Mail, Phone, MapPin, ExternalLink } from 'lucide-react'
-import Image from 'next/image'
+import { ProfileImage } from '@/components/ui/ProfileImage'
 
 type Member = {
   id: string
@@ -10,6 +10,8 @@ type Member = {
   seat: string
   bio: string
   photo_url: string | null
+  title?: string
+  is_active?: boolean
   contact_info: {
     email?: string
     phone?: string
@@ -38,19 +40,12 @@ export function MemberCard({ member }: MemberCardProps) {
       <div className="flex items-start space-x-4 mb-4">
         {/* Photo */}
         <div className="flex-shrink-0">
-          {member.photo_url ? (
-            <Image
-              src={member.photo_url}
-              alt={member.name}
-              width={64}
-              height={64}
-              className="w-16 h-16 rounded-full object-cover"
-            />
-          ) : (
-            <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
-              <User className="w-8 h-8 text-gray-400" />
-            </div>
-          )}
+          <ProfileImage 
+            src={member.photo_url} 
+            alt={member.name} 
+            size="sm" 
+            className="rounded-full"
+          />
         </div>
 
         {/* Name and Seat */}
