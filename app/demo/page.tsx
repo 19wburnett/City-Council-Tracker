@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
 import { ComparativeAnalysis } from '@/components/analytics/ComparativeAnalysis'
+import { RealBRLData } from '@/components/analytics/RealBRLData'
 import { MembersOverview } from '@/components/members/MembersOverview'
 import { RecentMeetings } from '@/components/meetings/RecentMeetings'
 import { VoteSummary } from '@/components/votes/VoteSummary'
@@ -30,6 +31,13 @@ export default function DemoPage() {
             <div className="text-sm">Architecture</div>
           </div>
         </div>
+      </section>
+
+      {/* Real BRL Data */}
+      <section>
+        <Suspense fallback={<LoadingSpinner />}>
+          <RealBRLData />
+        </Suspense>
       </section>
 
       {/* Comparative Analysis */}

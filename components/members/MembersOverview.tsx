@@ -26,9 +26,10 @@ export function MembersOverview() {
     async function fetchMembers() {
       try {
         const { data, error } = await supabase
-          .from('members')
+          .from('council_members')
           .select('*')
-          .order('seat')
+          .eq('is_active', true)
+          .order('name')
         
         if (error) throw error
         

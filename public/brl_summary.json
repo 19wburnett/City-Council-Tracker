@@ -1,0 +1,59 @@
+{
+  "total_records": 603,
+  "date_range": {
+    "start": "2023-12-07",
+    "end": "2025-02-13"
+  },
+  "council_members": [
+    "Aaron Brocket",
+    "Lauren Folkerts",
+    "Mark Wallach",
+    "Matt Benjamin",
+    "Nicole Speer",
+    "Ryan Schuchard",
+    "Taishya Adams",
+    "Tara Winer",
+    "Tina Marquis"
+  ],
+  "vote_distribution": {
+    "yea": 384,
+    "nay": 194,
+    "abstain": 16,
+    "tk": 9
+  },
+  "meeting_dates": {
+    "2025-02-05": 63,
+    "2024-08-15": 45,
+    "2024-11-07": 36,
+    "2024-05-02": 36,
+    "2023-12-07": 27,
+    "2025-01-16": 27,
+    "2024-03-07": 27,
+    "2024-11-21": 27,
+    "2024-10-17": 27,
+    "2024-10-10": 27
+  },
+  "vote_types": {
+    "ordinance": 216,
+    "call up": 162,
+    "amendment": 45,
+    "call up ": 45,
+    "motion": 27,
+    "nod of five": 18,
+    "concept plan": 18,
+    "executive session": 18,
+    "request": 9,
+    "resolution": 9,
+    "site review application": 9,
+    "agreement": 9,
+    "motion ": 9,
+    "site review": 9
+  },
+  "top_agenda_items": {
+    "Concept Review proposal to redevelop the 448,668 sq. ft. site at 2952 Baseline Rd. with a mixed-use development consisting of residential, commercial, hotel, and restaurant uses.": 18,
+    "ADOPT Ordinance 8611 designating the property at 604 Mapleton Ave., City of Boulder, Colorado, also known as the Eastman-Reid-Collins House, as an individual landmark under Chapter 9-11, \u00e2\u0080\u009cHistoric Preservation,\u00e2\u0080\u009d B.R.C. 1981; and setting forth related details": 9,
+    "Consideration of a motion to approve and authorize the city manager to enter into, execute, and negotiate administrative amendments prior to or during the term, a 20-year Fiber Backbone Lease Agreement, in substantially the same form as in Attachment A, between the City of Boulder and ALLO Communications LLC, leasing the city\u00e2\u0080\u0099s dark fiber backbone for retail broadband services, with the City Council finding that the lease and the construction associated therewith will provide a public benefit to the city of Boulder.": 9,
+    "Motion to adopt Ordinance 8646 designating the property at 1836 Pearl St., City of Boulder, Colorado, to be known as the Thelma Maydew House, as an individual landmark under Chapter 9-11, \u00e2\u0080\u009cHistoric Preservation,\u00e2\u0080\u009d B.R.C. 1981; and setting forth related details.": 9,
+    "Call up: Iris Avenue Transportation Improvement Project: Community Environmental Assessment Process": 9
+  }
+}

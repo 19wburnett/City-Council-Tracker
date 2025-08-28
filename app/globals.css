@@ -30,4 +30,21 @@
   .text-balance {
     text-wrap: balance;
   }
+  
+  /* Vote colors */
+  .text-vote-yea {
+    @apply text-green-600;
+  }
+  
+  .text-vote-nay {
+    @apply text-red-600;
+  }
+  
+  .text-vote-abstain {
+    @apply text-yellow-600;
+  }
+  
+  .text-vote-absent {
+    @apply text-gray-500;
+  }
 }

@@ -6,12 +6,12 @@ import { Vote, TrendingUp, TrendingDown, Minus, User } from 'lucide-react'
 
 type VoteData = {
   id: string
-  value: 'YEA' | 'NAY' | 'ABSTAIN' | 'ABSENT'
+  vote_value: 'YEA' | 'NAY' | 'ABSTAIN' | 'ABSENT'
   agenda_items: {
     title: string
-    issue_tags: string[]
+    tags: string[]
   }
-  members: {
+  council_members: {
     name: string
   }
 }
@@ -28,12 +28,12 @@ export function VoteSummary() {
           .from('votes')
           .select(`
             id,
-            value,
+            vote_value,
             agenda_items (
               title,
-              issue_tags
+              tags
             ),
-            members (
+            council_members (
               name
             )
           `)
@@ -119,12 +119,12 @@ export function VoteSummary() {
             
             <div className="flex-1 min-w-0">
               <div className="flex items-center space-x-2 mb-1">
-                <span className={`text-sm font-medium ${getVoteColor(vote.value)}`}>
-                  {vote.value}
+                <span className={`text-sm font-medium ${getVoteColor(vote.vote_value)}`}>
+                  {vote.vote_value}
                 </span>
                 <span className="text-gray-400">•</span>
                 <span className="text-sm text-gray-600">
-                  {vote.members.name}
+                  {vote.council_members.name}
                 </span>
               </div>
               
@@ -132,9 +132,9 @@ export function VoteSummary() {
                 {vote.agenda_items.title}
               </p>
               
-              {vote.agenda_items.issue_tags && vote.agenda_items.issue_tags.length > 0 && (
+              {vote.agenda_items.tags && vote.agenda_items.tags.length > 0 && (
                 <div className="flex flex-wrap gap-1">
-                  {vote.agenda_items.issue_tags.slice(0, 3).map((tag, index) => (
+                  {vote.agenda_items.tags.slice(0, 3).map((tag, index) => (
                     <span
                       key={index}
                       className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
@@ -142,9 +142,9 @@ export function VoteSummary() {
                       {tag}
                     </span>
                   ))}
-                  {vote.agenda_items.issue_tags.length > 3 && (
+                  {vote.agenda_items.tags.length > 3 && (
                     <span className="text-xs text-gray-500">
-                      +{vote.agenda_items.issue_tags.length - 3} more
+                      +{vote.agenda_items.tags.length - 3} more
                     </span>
                   )}
                 </div>

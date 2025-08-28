@@ -61,6 +61,8 @@ export default function HomePage() {
           </div>
         </section>
       </div>
+      
+
 
       {/* Call to Action */}
       <section className="text-center py-12 bg-gray-100 rounded-2xl">
